@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard-style.css">
+    <!-- <link rel="stylesheet" href="popup.css"> -->
+    <title>Zabdesk</title>
+    <style>
+      .dialog {
+        margin: auto;
+  width: 50%;
+  border: 1px solid black;
+  padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="container">
+      <div>
+        <dialog id="favDialog" class="dialog">
+          <!-- <form> -->
+        <div class="container-popup">
+            
+              <div class="popup" id="popup">
+                <div class="uploadPic">
+                  <h3>Upload Display Picture</h3>
+                </div>
+                <div class="content">
+                  <p style="color: rgb(239, 73, 73);">Image / DP is for official purpose so it should be formal only</p>
+                  <p>Image must be:</p>
+                        <ol type="1">
+                            <li>Recent (It should match your facial features)</li>
+                            <li>JPG format</li>
+                            <li>Image should be passport size</li>
+                            <li>Image should have White/ Blue/ Green background</li>
+                        </ol>
+                        <img class="img1" src="images/profile.jpg" alt="">
+                        <img class="img2" src="images/check-solid.svg" alt="">
+                        <img class="img3" src="images/wrongPrev.jpeg" alt="">
+                    </div>
+                    <div class="popFooter">
+                        <input required type="file" id="img" name="img" accept="image/*" >
+                        <button type="submit" class="btn2" id="btn2">
+                            Upload Image </button>
+                    </div>
+                </div>
+            </div>
+            <div>
+              <button id="confirmBtn" value="default">Cancel</button>
+          <!-- </form> -->
+      </div>
+    
+        </dialog>
+      </div>
+      
+      <div class="sidebar">
+            <a href="#" class="logo"><img class="img-logo" src="images/logo.png" alt=""></a>
+            <h3>WELCOME, HARIS</h3>
+            <div class="container-profile">
+              <img class="profile" src="images/profile.jpg" alt="">
+            </div>
+            <div class="btn_upload">
+              <button type="submit" class="btn" id="uploadImg"> Upload Image </button>
+            </div>
+          </a></a>
+          
+          <div class="bottom-bar">
+            <a href="index.html"><img class="icon" src="images/right-from-bracket-solid (1).svg" alt=""></a>
+            <br>
+            <a href="index.html"><h3 style="color: black;">LogOut</h3></a>
+          </div>
+
+        </div>    
+        
+      </a>
+
+      <div class="main">
+        <div class="navbar">
+          <h2>Dashboard</h2>
+        </div>
+        
+        
+        
+        <div class="container-grid">
+                <div class="item item1 text">
+                  <h3>Haris Khalid</h3>
+                        <h3>2012246</h3>
+                        <h3>BCS/BS 6-D</h3>
+                        <h3>Spring 2023 </h3>
+                      </div>
+                        <div class="item">
+                          <div class="img-container">
+                            <a href="current-semester.html">
+                            <img class="tile-img" src="images/currentSem.png" alt="">
+                            <h3 class="title-tiles">Current Semester</h3></a>
+                          </a>
+                            <!-- <a href="current-semester.html">  <h3 class="title-tiles">Current Semester</h3></a> -->
+                          </div>
+                        </div>
+                        <div class="item">
+                   <div class="img-container">
+                    <a href="previousSem.html">
+                     <img class="tile-img" src="images/prevSem.png" alt="">
+                         <h3 class="title-tiles">Previous Semester</h3>
+                        </a>
+                      </div>
+                    </div> 
+                    <div class="item">
+                      <div class="img-container">
+                        <a href="semResult.html">
+                        <img class="tile-img" src="images/result.png" alt="">
+                           <h3 class="title-tiles">Semester Result</h3></a>
+                      </div>
+                    </div> 
+                    <div class="item">
+                      <div class="img-container">
+                        <a href="weekly-schedule.html">
+                        <img class="tile-img" src="images/calander.png" alt="">
+                         <h3 class="title-tiles">Weekly Schedule</h3></a>
+                      </div>
+                    </div> 
+                    <div class="item">
+                      <div class="img-container">
+                        <a href="exam-schedule.html">
+                        <img class="tile-img" src="images/calander1.png" alt="">
+                         <h3 class="title-tiles">Exam Schedule</h3></a>
+                      </div>
+                    </div> 
+                    <div class="item">
+                      <div class="img-container">
+                        <a href="print-report.html"> 
+                        <img class="tile-img" src="images/printer.jpeg" alt="">
+                         <h3 class="title-tiles">Print Report</h3></a>
+                      </div>
+                    </div> 
+                    <div class="item">
+                      
+                      <div class="img-container">
+                        <a href="change_pass.html"></a>
+                        <img class="tile-img" src="images/pass.png" alt="">
+                        <h3 class="title-tiles">Change Password</h3></a>
+                      </div>  
+                      
+                    </div>
+                </div>
+                </div>
+    </div>
+    <div id="center-point">
+    
+    </div>
+
+
+    <script>
+const showButton = document.getElementById('uploadImg');
+const favDialog = document.getElementById('favDialog');
+const confirmBtn = favDialog.querySelector('#confirmBtn');
+
+// "Show the dialog" button opens the <dialog> modally
+showButton.addEventListener('click', () => {
+  console.log('yahan arha hai');
+  favDialog.showModal();
+});
+
+
+// Prevent the "confirm" button from the default behavior of submitting the form, and close the dialog with the `close()` method, which triggers the "close" event.
+confirmBtn.addEventListener('click', (event) => {
+  event.preventDefault(); // We don't want to submit this fake form
+  favDialog.close(); // Have to send the select box value here.
+});
+</script>
+
+</body>
+</html

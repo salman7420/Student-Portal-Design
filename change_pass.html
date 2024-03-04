@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="change_pass_style.css">
+    <link rel="stylesheet" href="side-bar.css">
+    <title>ZabDesk</title>
+
+    
+</head>
+<body>
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="#" class="logo"><img class="img-logo" src="images/logo.png" alt=""></a>
+           
+           <div class="side-list"> 
+            <ul>
+              <a href="dashboard.html"> <li>Home</li> </a>
+              <a href="current-semester.html"><li>Current Semester</li></a>
+              <a href="previousSem.html"><li>Previous Semester</li></a>
+              <a href="semResult.html"><li>Semester Result</li></a>
+              <a href="weekly-schedule.html"><li>Weekly Schedule</li></a>
+              <a href="exam-schedule.html"><li>Exam Schedule</li></a>
+              <a href=""><li>Print Report</li></a>
+            </ul>
+        </div>
+            
+         
+          
+
+           <div class="bottom-bar">
+            <a href="index.html"><img class="icon" src="images/right-from-bracket-solid (1).svg" alt="" on></a>
+            <a href=""><img class="icon" src="images/gear-solid.svg" alt=""></a>
+           </div>
+        </div>    
+        
+        </a>
+
+        <div class="main">
+            <div class="navbar">
+               <h2>Change Password</h2>
+            </div>
+
+            <form onsubmit="validateForm()">
+                <label for="prev_password">Previous Password:</label>
+                <input type="password" id="prev_password" name="prev_password" required>
+                
+                <label for="new_password">New Password:</label>
+                <input type="password" id="new_password" name="new_password" required>
+                
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+                
+                <label for="secret_question">Secret Question:</label>
+                <select id="secret_question" name="secret_question" required>
+                  <option value="" disabled selected>Select a question</option>
+                  <option value="Best Childhood friend?">Best Childhood friend?</option>
+                  <option value="What is the name of your first pet?">What is the name of your first pet?</option>
+                  <option value="Favorite Football Club?">Favorite Football Club?</option>
+                </select>
+                
+                <label for="answer">Answer:</label>
+                <input type="text" id="answer" name="answer" required>
+                
+                <input type="submit" value="Change Password">
+              </form>
+        </div>
+    
+
+        <script>
+          function validateForm() {
+            var prevPassword = document.getElementById("prev_password").value;
+            var newPassword = document.getElementById("new_password").value;
+            var confirmPassword = document.getElementById("confirm_password").value;
+            var secretQuestion = document.getElementById("secret_question").value;
+            var answer = document.getElementById("answer").value;
+      
+            if (prevPassword.trim() === "") {
+              alert("Please enter your previous password.");
+              return false;
+            }
+            else if (prevPassword.trim() === newPassword.trim()) {
+              alert("Previous password and new password cannot be same.");
+              return false;
+            }
+      
+            else if (newPassword.trim() === "") {
+              alert("Please enter your new password.");
+              return false;
+            }
+      
+            else if (confirmPassword.trim() === "") {
+              alert("Please confirm your new password.");
+              return false;
+            }
+      
+            else if (newPassword !== confirmPassword) {
+              alert("New password and confirm password do not match.");
+              return false;
+            }
+      
+            if (secretQuestion === "") {
+              alert("Please select a secret question.");
+              return false;
+            }
+      
+            if (answer.trim() === "") {
+              alert("Please provide an answer to the secret question.");
+              return false;
+            }
+      
+            return true;
+          }
+        </script>
+</body>
+</html>

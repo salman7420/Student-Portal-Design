@@ -1,0 +1,72 @@
+.secondry-container {
+  height: 100%;
+  width: 100%;
+}
+.table-container {
+  margin-top: 5%;
+  margin-left: 5%;
+  height: 90%;
+  width: 90%;
+  background: #e7f2fd;
+  border-radius: 8px;
+}
+.table-label {
+  position: relative;
+  /* top: 5% ; */
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  height: 10%;
+  width: 90%;
+  background: #0c54a3;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 4%;
+}
+h4 {
+  margin-top: 2%;
+  display: inline-block;
+  color: white;
+  font-weight: 500;
+}
+table,
+th,
+td {
+  border-collapse: collapse;
+  border: 1px solid lightgray;
+}
+th {
+  background-color: #3785d9;
+  color: white;
+}
+table {
+  margin-left: 2.5%;
+  margin-right: 2.55%;
+  width: 95%;
+  height: 70%;
+}
+th,
+td {
+  padding: 5px;
+  text-align: center;
+}
+.Schedule {
+  margin: 0%;
+  width: 100%;
+  font-size: 13px;
+}
+@media screen and (max-width: 768px) {
+  .table-container {
+    margin: 5% 2.5%;
+    height: auto;
+  }
+
+  .table-label {
+    margin: 5% 2.5%;
+  }
+
+  table {
+    margin: 0 2.5%;
+    width: 95%;
+  }
+}

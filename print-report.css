@@ -1,0 +1,18 @@
+table {
+    width: 60%;
+    color: black;
+    margin-top: 10%;
+    margin-left: 20%;
+    border: 1px solid lightgray;
+  }
+ 
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+
+    table thead {
+    color: white;
+    background-color:  #3785d9;
+    }
